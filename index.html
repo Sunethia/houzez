@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar begins here -->
+
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand"> 
+          <a href="#!home">Sunethia</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="#!home">Home</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">Web Design</a></li>
+                <li><a href="#!">Web Development</a></li>
+                <li><a href="#!">Graphic Design</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!listing">Listing</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">Web Design</a></li>
+                <li><a href="#!">Web Development</a></li>
+                <li><a href="#!">Graphic Design</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!properties">Properties</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">Default</a></li>
+                <li><a href="#!">With Caption form</a></li>
+                <li><a href="#!">With overlay</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!home">Realtor</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">Agents</a></li>
+                <li><a href="#!">Agent profile</a></li>
+                <li><a href="#!">Agencies</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!home">Others</a>
+              <ul class="nav-dropdown">
+                <li><a href="#!">About </a></li>
+                <li><a href="#!">Inquiry form</a></li>
+                <li><a href="#!">Contact</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Navbar ends -->
+    <!-- home page starts here -->
+    <section id="home">
+      <div class="home-text">
+        <h1>Welcome To Houzeez</h1>
+        <h2>
+          Houzez is an innovative real estate WordPress theme that helps<br />to
+          ensure your website's success in this super-competitive market.
+        </h2>
+      </div>
+      <div class="top_head">
+        <div class="row">
+          <div class="col">
+            <button>All Status</button>
+          </div>
+          <div class="col">
+            <button>For Rent</button>
+          </div>
+          <div class="col">
+            <button>For Sale</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="banner" >
+      <form class="box-home">
+        <div class="form-items">
+          <label for="Looking for?">Choose type:</label>
+          <select id="type" name="type">
+            <option value="Commercial">Commercial</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <div class="form-items">
+          <label for="Location">Choose location:</label>
+          <select id="location" name="location">
+            <option value="volvo">All Cities</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <div class="form-items">
+          <label for="Property size?">Property size:</label>
+          <select id="size" name="size">
+            <option value="volvo">Bedrooms</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <div class="form-items">
+          <label for="Your budget?">Price range:</label>
+          <select id="price" name="price">
+            <option value="volvo">Max-Price</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <button type="button" class="search">Search</button>
+      </form>
+    </div>
+
+    <!-- home page ends here -->
+    <!-- listing page starts here -->
+    <section class="listing">
+      <h1 class="listing1">Discover our featured listings</h1>
+      <h3 class="text3">Lorem ipsum dolor, sit amet consectetur adipisicing</h3>
+      <div class="container">
+        <div class="card" style="width: 18rem">
+          <img
+            src="./images/apartment1.jpg"
+            class="card-img-top"
+            alt="apartment1"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Renovated Studio</h5>
+            <p class="card-text">
+              194 Mercer Street,627 Broadway,New york,NY 10012, USA
+            </p>
+            <i class="fa-solid fa-bed"></i></i>4
+            <i class="fa-solid fa-shower"></i> 2
+            <i class="fa-solid fa-car"></i>1
+            <i class="bi bi-triangle"></i></i>2500
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./images/apartment2.jpg"
+            class="card-img-top"
+            alt="apartment2"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Apartment with Nice View</h5>
+            <p class="card-text">8100 Death land,Chicago,9100, USA</p>
+           <i class="fa-solid fa-bed"></i></i>3
+            <i class="fa-solid fa-shower"></i> 2
+            <i class="fa-solid fa-car"></i>1
+            <i class="bi bi-triangle"></i></i>3600
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./images/apartment3.jpg"
+            class="card-img-top"
+            alt="apartment3"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Light and modern apartment</h5>
+            <p class="card-text">345 Sunethia street, Lansdowne, 9100, SA</p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 2
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>3500
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./images/apartment4.jpg"
+            class="card-img-top"
+            alt="apartment4"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Design apartment</h5>
+            <p class="card-text">Quincy street, Brooklyn, NY, USA</p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2200
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- listing page ends here -->
+    <!-- properties page starts here -->
+    <section class="properties">
+      <h1 class="properties1">Check Our Selection Of Finest Properties</h1>
+      <h3 class="properties2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit
+      </h3>
+      <div class="container-properties">
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment1.jpg" class="card-img-top" alt="apartment1" />
+          <div class="card-body">
+            <h5 class="card-title">Renovated studio</h5>
+            <p class="card-text">
+               194 Mercer Street,627 Broadway,New york,NY 10012, USA
+            </p>
+           <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2200
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment2.jpg" class="card-img-top" alt="apartment2" />
+          <div class="card-body">
+            <h5 class="card-title">Apartment with Nice View</h5>
+            <p class="card-text">
+             8100 Death land,Chicago,9100, USA
+            </p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2000
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment3.jpg" class="card-img-top" alt="apartment3" />
+          <div class="card-body">
+            <h5 class="card-title">Light and modern apartment</h5>
+            <p class="card-text">
+            345 Sunethia street, Lansdowne, 9100, SA
+            </p>
+             <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>3500
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment4.jpg" class="card-img-top" alt="apartment4" />
+          <div class="card-body">
+            <h5 class="card-title">Design apartment</h5>
+            <p class="card-text">
+            Quincy street, Brooklyn, NY, USA
+            </p>
+             <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>3000
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment8.jpg" class="card-img-top" alt="apartment5" />
+          <div class="card-body">
+            <h5 class="card-title">Fancy Apartment</h5>
+            <p class="card-text">
+             165 Constable road, brooklyn, USA, NY
+            </p>
+             <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2200
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment6.jpg" class="card-img-top" alt="apartment6" />
+          <div class="card-body">
+            <h5 class="card-title">Lovely Spacious Apartment</h5>
+            <p class="card-text">
+              67 Main street, Chicago, NY, USA
+            </p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>3000
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment7.jpg" class="card-img-top" alt="apartment7" />
+          <div class="card-body">
+            <h5 class="card-title">Beautiful Apartment</h5>
+            <p class="card-text">
+              786 Street, Boston, Cape town
+            </p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2200
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment8.jpg" class="card-img-top" alt="apartment8" />
+          <div class="card-body">
+            <h5 class="card-title">Apartment</h5>
+            <p class="card-text">
+             6477 Long street, 0000, Boston, Cape town
+            </p>
+           <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>2500
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./images/apartment9.jpg" class="card-img-top" alt="apartment9" />
+          <div class="card-body">
+            <h5 class="card-title">Open plan apartment</h5>
+            <p class="card-text">
+             6473 Hungary Street, Chicago, USA
+            </p>
+            <i class="fa-solid fa-bed"></i></i>2
+            <i class="fa-solid fa-shower"></i> 1
+            <i class="fa-solid fa-car"></i>1
+           <i class="bi bi-triangle"></i></i>1500
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- properties page ends here -->
+    <!-- footer starts here -->
+    <!-- <section class="footer">
+      <div class="container">
+        <h4 class="footer1text">Discover</h4>
+        <h5 class="footer2text">Miami<br />Los Angeles<br />Chicago<br />New York<br /></h5>
+        <br />
+        <h4 class="contactus">Contact Us</h4>
+        <h5>
+          774 NE 84th St Miami, FL 33879<br/>
+          987 654 9875<br />
+          879 456 1349<br />
+          email@houzez.com<br />
+        </h5>
+        <h4>Newsletter</h4>
+        <form class="form">
+          <input
+            type="email"
+            class="form__field"
+            placeholder="Your E-Mail Address"
+          />
+          <button type="button" class="btn btn--primary btn--inside uppercase">
+            Send
+          </button>
+        </form>
+        <h5>
+          Houzez is a premium WordPress theme for Designers & Real Estate
+          Agents.
+        </h5>
+      </div>
+    </section>
+    <section class="footer2">
+      <div class="container">
+        <h5>© Houzez - All rights reserved</h5>
+        <div class="container-icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-google-plus-g"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-pinterest-p"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </section> -->
+    <!-- footer ends here -->
+
+
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col"> 
+            <h1>Discover</h1>
+            <ul>
+              <li>Miami</li>
+              <li>  Los Angeles</li>
+              <li>Chicago</li>
+              <li>New York</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Contact Us</h1>
+            <ul>
+              <li> 774 NE 84th St Miami, FL 33879 </li>
+              <li>  987 654 9875  </li>
+              <li>879 456 1349</li>
+              <li> email@houzez.co</li>
+            </ul>
+          </div>
+          <div class="col">
+             <h1>Newsletter</h1>
+            <form action="https://formspree.io/lawrencesunethia@gmail.com" method="POST">
+              <!-- <input placeholder="Name" class="input-field" type="text" name="name"/> -->
+              <input placeholder="E-mail" class="input-field" type="email" name="_replyto">
+                <!-- <textarea id="textarea1" class="materialize-textarea" placeholder="Enter your message here..." name="message" data-length="500"></textarea> -->
+              <input class="waves-effect waves-light btn blue darken-2 right" type="submit" value="Send">
+              <!-- <input type="hidden" name="_next" value="https://codepen.io/bhill2588/full/PjeZgN/" /> -->
+            </form>
+            <p>Houzez is a premium WordPress theme for Designers & Real Estate Agents.</p>
+          </div>
+        </div>
+      </div>
+      <section id="smallfoot">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                <h4 class="rights">@Sunethia-All rights reserved</h4>
+            </div>
+            <div class="col">
+              <h1 class="houzez">@Sunethia</h1>
+            </div>
+            <div class="col">
+              <div class="icons"></div>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-google-plus-g"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-pinterest-p"></i>
+              <i class="fa-brands fa-youtube"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/586818ff86.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
