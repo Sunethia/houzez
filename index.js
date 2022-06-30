@@ -1,24 +1,3 @@
-// navbar begins here
-(function ($) {
-  $(function () {
-    $("nav ul li > a:not(:only-child)").click(function (e) {
-      $(this).siblings(".nav-dropdown").toggle();
-      $(".nav-dropdown").not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-    });
-    $("#nav-toggle").on("click", function () {
-      this.classList.toggle("active");
-    });
-    $("#nav-toggle").click(function () {
-      $("nav ul").toggle();
-    });
-  });
-})(jQuery);
-// navbar ends here
-
 let listing = JSON.parse(localStorage.getItem("listing"))
   ? JSON.parse(localStorage.getItem("listing"))
   : [
@@ -26,7 +5,8 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         img: "./images/apartment1.jpg",
         title: "Renovated studio",
         type: "double",
-        cardhead: "194 Mercer Street,627 Broadway,New york,NY 10012, USA",
+        location: "194 Mercer Street,627 Broadway,New york,NY 10012, USA",
+        price: "R500",
         card_icon: 3,
         card_icon1: 2,
         card_icon2: 2,
@@ -37,7 +17,8 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         img: "./images/apartment2.jpg",
         title: "Apartment with Nice View",
         type: "double",
-        carhead: " 8100 Death land,Chicago,9100, USA",
+        location: " 8100 Death land,Chicago,9100, USA",
+        price: "R1500",
         card_icon: 4,
         card_icon1: 3,
         card_icon2: 2,
@@ -48,7 +29,8 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         img: "./images/apartment3.jpg",
         title: "Light and modern apartment ",
         type: "double",
-        carhead: " 345 Sunethia street, Lansdowne, 9100, SA",
+        location: " 345 Sunethia street, Lansdowne, 9100, SA",
+        price: "R1800",
         card_icon: 6,
         card_icon1: 4,
         card_icon2: 3,
@@ -59,7 +41,8 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         img: "./images/apartment4.jpg",
         title: "Design apartment",
         type: "double",
-        carhead: "Quincy street, Brooklyn, NY, USA",
+        location: "Quincy street, Brooklyn, NY, USA",
+        price: "R2500",
         card_icon: 25,
         card_icon1: 30,
         card_icon2: 50,
@@ -67,10 +50,11 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         bot_head: "Palace",
       },
       {
-        img: "./images/apartment8",
+        img: "./images/apartment8.jpg",
         title: "Fancy Apartment",
         type: "double",
-        carhead: "165 Constable road, brooklyn, USA, NY",
+        location: "165 Constable road, brooklyn, USA, NY",
+        price: "R2000",
         card_icon: 94,
         card_icon1: 100,
         card_icon2: 150,
@@ -81,7 +65,56 @@ let listing = JSON.parse(localStorage.getItem("listing"))
         img: "./images/apartment6.jpg",
         title: "Lovely Spacious Apartment",
         type: "double",
-        carhead: " 67 Main street, Chicago, NY, USA",
+        location: " 67 Main street, Chicago, NY, USA",
+        price: "R800",
+        card_icon: 4,
+        card_icon1: 3,
+        card_icon2: 2,
+        card_icon3: "1500 Sq M",
+        bot_head: "Apartment",
+      },
+      {
+        img: "./images/apartment7.jpg",
+        title: "Beautiful Apartment",
+        type: "double",
+        location: " 786 Street, Boston, Cape town",
+        price: "R1900",
+        card_icon: 4,
+        card_icon1: 3,
+        card_icon2: 2,
+        card_icon3: "1500 Sq M",
+        bot_head: "Apartment",
+      },
+      {
+        img: "./images/apartment8.jpg",
+        title: "Lovely Spacious Apartment",
+        type: "double",
+        location: " 67 Main street, Chicago, NY, USA",
+        price: "R1500",
+        card_icon: 4,
+        card_icon1: 3,
+        card_icon2: 2,
+        card_icon3: "1500 Sq M",
+        bot_head: "Apartment",
+      },
+      {
+        img: "./images/apartment9.jpg",
+        title: "Lovely Spacious Apartment",
+        type: "double",
+        location: " 67 Main street, Chicago, NY, USA",
+        price: "R1200",
+        card_icon: 4,
+        card_icon1: 3,
+        card_icon2: 2,
+        card_icon3: "1500 Sq M",
+        bot_head: "Apartment",
+      },
+      {
+        img: "./images/apartment1.jpg",
+        title: "Lovely Spacious Apartment",
+        type: "double",
+        location: " 67 Main street, Chicago, NY, USA",
+        price: "R3000",
         card_icon: 4,
         card_icon1: 3,
         card_icon2: 2,
@@ -94,12 +127,13 @@ function readData(listing) {
   document.querySelector("#listing").innerHTML = "";
   listing.forEach((listing, i) => {
     document.querySelector("#listing").innerHTML += `
-      <div class="card" style="width: 18rem">
-      <img src=${listing.img} class="card-img-top" />
+      <div class="card" style="width: 30%">
+      <img src=${listing.img} class="card-img-top img-fluid" style="max-height: 200px" />
       <div class="card-body">
       <p class="card-text">
       <h4 class="card-title">${listing.title}</h4>
-          <h6>${listing.carhead}</h6>
+      <h4>${listing.price}</h4>
+          <h6>${listing.location}</h6>
           <i class="fa-solid fa-bed card_icon"></i>${listing.card_icon}
           <i class="fa-solid fa-shower card_icon"></i>${listing.card_icon1}
           <i class="fa-solid fa-car card_icon"></i>${listing.card_icon2}

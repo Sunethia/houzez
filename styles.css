@@ -259,11 +259,14 @@ select {
 }
 /* end of home */
 /* form ends here */
-
-/* listing page starts here */
-.listing {
-  height: 150vh;
+#listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
+/* listing page starts here */
+
 section .container {
   display: flex;
   align-items: center;
@@ -348,10 +351,14 @@ section .container-properties {
 
 #footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  align-content: center;
+  padding-right: 10%;
+  padding-left: 10%;
   margin-top: 30px;
   height: 70vh;
+  color: blue;
 }
 
 html {
@@ -423,21 +430,43 @@ input[type="text"].valid {
   margin-right: 450px;
 }
 
+.smallfoot {
+  position: absolute;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.footer-p {
+  position: relative;
+  top: 5px;
+  right: 300px;
+}
+
+.icons {
+  display: flex;
+  position: relative;
+  /* top: 5px;  */
+  justify-content: space-between;
+  bottom: 20px;
+  left: 500px;
+}
+
+.fa-brands:hover {
+  color: blue;
+}
+
 /* media queries */
 
-@media (max-width: 989) {
-  .card {
+@media (max-width:1090px ) {
+  .icons {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
   }
+  
 }
-@media (max-width: 853) {
-  .card {
-    gap: 10px;
-  }
-}
+@media (max-width:990px) {
 
-@media (max-width: 800) {
-  .navigation {
-  }
+  
 }
