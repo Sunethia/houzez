@@ -75,7 +75,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
       },
       {
         img: "./images/apartment7.jpg",
-        title: "Cozy Apartment",
+        title: "Beautiful Apartment",
         type: "double",
         location: " 786 Street, Boston, Cape town",
         price: "R1900",
@@ -99,7 +99,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
       },
       {
         img: "./images/apartment9.jpg",
-        title: "Spacious Apartment",
+        title: "Lovely Spacious Apartment",
         type: "double",
         location: " 67 Main street, Chicago, NY, USA",
         price: "R1200",
@@ -111,7 +111,7 @@ let listings = JSON.parse(localStorage.getItem("listings"))
       },
       {
         img: "./images/apartment1.jpg",
-        title: "Beautiful Apartment",
+        title: "Lovely Spacious Apartment",
         type: "double",
         location: " 67 Main street, Chicago, NY, USA",
         price: "R3000",
@@ -122,47 +122,111 @@ let listings = JSON.parse(localStorage.getItem("listings"))
         bot_head: "Apartment",
       },
     ];
-let asc = true;
-const listingsContainer = document.querySelector("#tableItems");
+console.log(listings);
+// let asc = true;
+const listingsContainer = document.querySelector("#listings");
 function showlistings(listings) {
   listingsContainer.innerHTML = "";
-  console.log(listings);
-  listings.forEach((listing) => {
+  listings.forEach((listings) => {
     listingsContainer.innerHTML += `
-      <tr>
-        <th scope="row">${listing.id}</th>
-        <td>${listing.image}</td>
-        <td>${listing.title}</td>
-        <td>${listing.type}</td>
-        <td>${listing.location}</td>
-        <td>${listing.size}</td>
-        <td>${listing.price}</td>
-        <td><i class="fa-solid fa-pen-to-square p-3"></i>
-        <i onclick="deleteTask(${listing.id})" class="fa-solid fa-trash-can p-3"></i></td>
-      </tr>
+    <tr>
+    <td>${listings.img}<td>
+    <td>${listings.title}<td>
+    <td>${listings.type}<td>
+    <td>${listings.carhead}<td>
+    <td>${listings.bot_head}<td>
+    <td><button
+    type="button"
+    class="btn btn-danger"
+    data-bs-toggle="modal"
+    data-bs-target="#edit${i}"
+  >
+    Edit
+  </button>
+    <i onclick="deleteItem(${listings.id})" class="fa-solid fa-trash-can p-3"></i></td>
+    <tr>
+    <div
+  class="modal fade"
+  id="edit${id}"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="">Edit Product</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="Enter image" id="image-${i}" value="${listings.img}"/>
+        <input type="text" placeholder="Enter title" id="title-${i}" value="${listings.title}" />
+        <input type="text" placeholder="Enter type" id="type-${i}" value="${listings.type}"/>
+        <input type="text" placeholder="Enter carhead" id="carhead-${i}" value="${listings.carhead}"/>
+        <input type="text" placeholder="Enter bot_head" id="bot_head-${i}" value="${listings.bot_head}"/>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Cancel
+        </button>
+        <button
+        data-bs-toggle="modal"
+        data-bs-target="#edit-${i}"
+          type="button"
+          class="btn btn-primary"
+          onclick="editProperty(${i})"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
        `;
   });
 }
 showlistings(listings);
-//add function
-function addlisting() {
-  const newlisting = {
-    image: document.querySelector("#image").value,
+function addProperty() {
+  const newPropety = {
+    img: document.querySelector("#image").value,
     title: document.querySelector("#title").value,
     type: document.querySelector("#type").value,
-    location: document.querySelector("#location").value,
-    size: document.querySelector("#size").value,
-    price: document.querySelector("#price").value,
+    carhead: document.querySelector("#carhead").value,
+    bot_head: document.querySelector("#bot_head").value,
     id: listings.length + 1,
   };
-  listings.push(newlisting);
+  listings.push(newProperty);
   localStorage.setItem("listings", JSON.stringify(listings));
   showlistings(listings);
 }
-document.querySelector("#addNewItem").addEventListener("click", addlisting);
-//delete function
-function deleteTask(id) {
-  listings = listings.filter((listing) => listing.id !== id);
+document.querySelector("#addNewItem").addEventListener("click", addProperty);
+function deleteItem(id) {
+  listings = listings.filter((listings) => listings.id !== id);
   localStorage.setItem("listings", JSON.stringify(listings));
-  showlistings(listing);
+  showlistings(listings);
+}
+function editItems(i) {
+  let img = document.querySelector(`#image-${i}`).value;
+  let title = document.querySelector(`#title-${i}`).value;
+  let type = document.querySelector(`#type-${i}`).value;
+  let carhead = document.querySelector(`#carhead-${i}`).value;
+  let bot_head = document.querySelector(`#bot_head-${i}`).value;
+  listings[i] = {
+    img,
+    title,
+    type,
+    carhead,
+    bot_head,
+  };
+  localStorage.setItem("listings", JSON.stringify(listings));
+  readData(listings);
 }

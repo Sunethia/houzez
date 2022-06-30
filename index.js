@@ -146,3 +146,37 @@ function readData(listing) {
   });
 }
 readData(listing);
+
+filter = () => {
+  let FilterOption = document.querySelector("#type").value;
+  if (FilterOption !== "all") {
+    console.log(FilterOption);
+    document.querySelector("#listings").innerHTML = "";
+    let specificView = listings.filter(
+      (listing) => listing.type == FilterOption
+    );
+    specificView.forEach((listing) => {
+      document.querySelector(
+        "#listings"
+      ).innerHTML += ` <div class="card" style="width: 30%">
+      <img src=${listing.img} class="card-img-top img-fluid" style="max-height: 200px" />
+      <div class="card-body">
+      <p class="card-text">
+      <h4 class="card-title">${listing.title}</h4>
+      <h4>${listing.price}</h4>
+          <h6>${listing.location}</h6>
+          <i class="fa-solid fa-bed card_icon"></i>${listing.card_icon}
+          <i class="fa-solid fa-shower card_icon"></i>${listing.card_icon1}
+          <i class="fa-solid fa-car card_icon"></i>${listing.card_icon2}
+          <i class="fa-solid fa-ruler card_icon"></i>${listing.card_icon3}
+            <h6>${listing.bot_head}</h6>
+        </p>
+       </div>
+      </div>
+            `;
+      console.log(specificView);
+    });
+  } else {
+    display();
+  }
+};

@@ -98,9 +98,14 @@
     <div class="banner" >
       <form class="box-home">
         <div class="form-items">
-          <label for="Looking for?">Choose type:</label>
-          <select id="type" name="type">
-            <option value="Commercial">Commercial</option>
+          <label for="Looking for?">Looking for</label>
+          <select 
+          name="search categories"
+          id="type"
+          onchange="filter()"
+          class="form-control"
+          >
+            <option value="">Choose category</option>
             <option value="apartment">Apartment</option>
             <option value="condo">Condo</option>
             <option value="villa">Villa</option>
@@ -108,16 +113,25 @@
         </div>
         <div class="form-items">
           <label for="Location">Choose location:</label>
-          <select id="location" name="location">
-            <option value="All Cities">All Cities</option>
+          <select 
+          name="search categories"
+          id="location"
+          onchange="filter2()"
+          class="form-control"
+          >
+            <option value="">Choose location</option>
             <option value="Cape Town">Cape town</option>
             <option value="New york">New york</option>
             <option value="Chicago">Chicago</option>
           </select>
         </div>
         <div class="form-items">
-          <label for="Property size?">Property size:</label>
-          <select id="size" name="size">
+          <label for="Bedrooms?">Bedrooms</label>
+          <select 
+          name="search categories"
+          id="bedrooms" onchange="filter3()"
+          class="form-control"
+          >
             <option value="Bedrooms">Bedrooms</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -126,14 +140,17 @@
         </div>
         <div class="form-items">
           <label for="Your budget?">Price range:</label>
-          <select id="price" name="price">
+          <select 
+          name="search categories"
+          id="budget"
+           class="form-control"
+           >
             <option value="Max-Price">Max-Price</option>
             <option value="0-500">0-500</option>
             <option value="500-1500">500-1500</option>
             <option value="2000-2500">2000-2500</option>
           </select>
         </div>
-        <button type="button" class="search">Search</button>
       </form>
     </div>
 

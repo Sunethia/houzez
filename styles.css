@@ -458,15 +458,14 @@ input[type="text"].valid {
 
 /* media queries */
 
-@media (max-width:1090px ) {
-  .icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+@media screen and (max-width: 370px) {
+.home h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 200px;
+    margin-top: 300px;
 }
-@media (max-width:990px) {
 
-  
 }
+ 
+  
