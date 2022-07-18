@@ -1,239 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Navbar begins here -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <section class="navigation">
-      <div class="nav-container">
-        <div class="brand"> 
-          <a href="#!home">Sunethia</a>
-        </div>
-        <nav>
-          <div class="nav-mobile">
-            <a id="nav-toggle" href="#!"><span></span></a>
-          </div>
-          <ul class="nav-list">
-            <li>
-              <a href="#!home">Home</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">Web Design</a></li>
-                <li><a href="#!">Web Development</a></li>
-                <li><a href="#!">Graphic Design</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#!listing">Listing</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">Web Design</a></li>
-                <li><a href="#!">Web Development</a></li>
-                <li><a href="#!">Graphic Design</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#!properties">Properties</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">Default</a></li>
-                <li><a href="#!">With Caption form</a></li>
-                <li><a href="#!">With overlay</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#!home">Realtor</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">Agents</a></li>
-                <li><a href="#!">Agent profile</a></li>
-                <li><a href="#!">Agencies</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#!home">Others</a>
-              <ul class="nav-dropdown">
-                <li><a href="#!">About </a></li>
-                <li><a href="#!">Inquiry form</a></li>
-                <li><a href="#!">Contact</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-
-    <!-- Navbar ends -->
-    <!-- home page starts here -->
-    <section id="home">
-      <div class="home-text">
-        <h1>Welcome To Houzeez</h1>
-        <h2>
-          Houzez is an innovative real estate WordPress theme that helps<br />to
-          ensure your website's success in this super-competitive market.
-        </h2>
-      </div>
-      <div class="top_head">
-        <div class="row">
-          <div class="col">
-            <button>All Status</button>
-          </div>
-          <div class="col">
-            <button>For Rent</button>
-          </div>
-          <div class="col">
-            <button>For Sale</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="banner" >
-      <form class="box-home">
-        <div class="form-items">
-          <label for="Looking for?">Looking for</label>
-          <select 
-          name="search categories"
-          id="type"
-          onchange="filter()"
-          class="form-control"
-          >
-            <option value="">Choose category</option>
-            <option value="apartment">Apartment</option>
-            <option value="condo">Condo</option>
-            <option value="villa">Villa</option>
-          </select>
-        </div>
-        <div class="form-items">
-          <label for="Location">Choose location:</label>
-          <select 
-          name="search categories"
-          id="location"
-          onchange="filter2()"
-          class="form-control"
-          >
-            <option value="">Choose location</option>
-            <option value="Cape Town">Cape town</option>
-            <option value="New york">New york</option>
-            <option value="Chicago">Chicago</option>
-          </select>
-        </div>
-        <div class="form-items">
-          <label for="Bedrooms?">Bedrooms</label>
-          <select 
-          name="search categories"
-          id="bedrooms" onchange="filter3()"
-          class="form-control"
-          >
-            <option value="Bedrooms">Bedrooms</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-        <div class="form-items">
-          <label for="Your budget?">Price range:</label>
-          <select 
-          name="search categories"
-          id="budget"
-           class="form-control"
-           >
-            <option value="Max-Price">Max-Price</option>
-            <option value="0-500">0-500</option>
-            <option value="500-1500">500-1500</option>
-            <option value="2000-2500">2000-2500</option>
-          </select>
-        </div>
-      </form>
-    </div>
-
-    <!-- home page ends here -->
-    <!-- listing page starts here -->
-    <section class="listing">
-      <h1 class="listing1">Discover our featured listings</h1>
-      <h3 class="text3">Lorem ipsum dolor, sit amet consectetur adipisicing</h3>
-      <div class="container" id="listing">
+</head>
+<body>
+    <div class="container-fluid">
       
-    </section>
-   
-    <!-- footer ends here -->
-
-
-    <section id="footer">
-      <div class="container">
-        <div class="row">
-            <div class="col"> 
-              <h1>Discover</h1>
-              <ul>
-                <li>Miami</li>
-                <li>  Los Angeles</li>
-                <li>Chicago</li>
-                <li>New York</li>
-              </ul>
-            </div>
-            <div class="col">
-              <h1>Contact Us</h1>
-              <ul>
-                <li>774 NE 84th St Miami, FL 33879 </li>
-                <li>987 654 9875</li>
-                <li>879 456 1349</li>
-                <li> email@houzez.co</li>
-              </ul>
-            </div>
-            <div class="col">
-               <h1>Newsletter</h1>
-              <form action="https://formspree.io/lawrencesunethia@gmail.com" method="POST">
-                <!-- <input placeholder="Name" class="input-field" type="text" name="name"/> -->
-                <input placeholder="E-mail" class="input-field" type="email" name="_replyto">
-                  <!-- <textarea id="textarea1" class="materialize-textarea" placeholder="Enter your message here..." name="message" data-length="500"></textarea> -->
-                <input class="waves-effect waves-light btn blue darken-2 right" type="submit" value="Send">
-                <!-- <input type="hidden" name="_next" value="https://codepen.io/bhill2588/full/PjeZgN/" /> -->
-              </form>
-              <p>Houzez is a premium WordPress theme for Designers & Real Estate Agents.</p>
-            </div>
-
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          <a class="nav-link" href="#">PROPERTIES</a>
+          <a class="nav-link" href="#">CONTACT</a>
+          
         </div>
       </div>
-      </section>
-      <section id="smallfoot">
-        <div class="container">
-          <div class="row">
-            <div class="">
-              <h6 class="footer-p" style="color: blue;">@Sunethia-All rights reserved</h6>
-            </div>
-            <div class="">
-              <div class="icons">
-                <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-google-plus-g"></i>
-              <i class="fa-brands fa-linkedin-in"></i>
-              <i class="fa-brands fa-pinterest-p"></i>
-              <i class="fa-brands fa-youtube"></i>
-              </div>
-            </div>
-          </div>
-         
-          </div>
+    </div>
+  </nav>
+      <!-- home section -->
+      <section id="home">
+        <div class="hometext">
+        <H1> Sunethia's Properties</H1>
+        <h5>Properties for all your house dreams</h5>
+      <a href="admin.html" ><button id="adminbtn">Admin</button></a>
+    </div>
+      <!-- filter form -->
+      <div id="form1">
+      <form>
+          <div class="filters">
+            <label for="exampleInputEmail1" class="form-label">Type</label>
+            <div>
+                <select name="budgets" id="comboA" onchange="typeHouse()" placeholder="Max Price">
+                    
+                    <option value="All">Looking for..</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="House">Family House</option>
+                    <option value="Studio">Studio</option>
+                   
+                  </select>
+           
         </div>
-      </section>
+        </div>
+        <div class="filters">
+            <label for="exampleInputEmail1" class="form-label">City</label>
+            <div>
+                <select name="budgets" id="comboB" onchange="addressHouse()" placeholder="Max Price">
+                    
+                    <option value="All">All Cities</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Miami">Miami</option>
+                    <option value="New York">New York</option>
+                  </select>
+           
+        </div>
+    </div>
+        
+    <div class="filters">
+            <label for="exampleInputEmail1" class="form-label">Bedrooms</label>
+            <div>
+                <select name="budgets" id="comboC" onchange="bedroomsHouse()" placeholder="Max Price">
+                    
+                    <option value="All">Bedrooms</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+           
+        </div>
+    </div>
+       
+    <div class="filters">
+            <label for="budgets" class="form-label">Price</label>
+            <div>
+                <select name="budgets" id="comboD" onchange="priceHouse()" placeholder="Max Price">
+                    
+                    <option value="All">Max Price</option>
+                    <option value="All">Any</option>
+                    <option value="4500">$3000-$5000</option>
+                    <option value="6000">$5000-$8000</option>
+                    <option value="10000">$8000+</option>
+                  </select>
+           
+        </div>
+    </div>
+     </form>
+    </div>
     </section>
+
+    <!-- property section -->
+    <section id="Housebox">
+        <h1 id="find" >Find the House of your dreams</h1>
+        <button onclick="sortHouses()" id="sortbtn">Price descending</button>
+<div id="properties"></div>
+</section>
+
+<section id="footer">
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <IMG SRC="https://picsum.photos/id/541/200/300" ALT="" WIDTH=150 HEIGHT=100>
+      <p class="footer-links">
+        <a href="#">Home</a> ·
+        <a href="#">About</a> ·
+        <a href="#">Extra</a> ·
+        <a href="#">About</a> ·
+        <a href="#">Faq</a> ·
+        <a href="#">Contact</a>
+      </p>
+      <p class="footer-company-name">Sunethia's Properties &copy; 2022</p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>314 Imam Haron road</span> CapeTown, SA</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>911</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">brokenlinks.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About this site</span> yes
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</section>
     <script src="index.js"></script>
-    <script src="admin.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/586818ff86.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://kit.fontawesome.com/28c2fb0c61.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
 </html>

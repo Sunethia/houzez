@@ -1,117 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/5d5fd894ec.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./admin.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="addlisting">
     <!-- Button trigger modal -->
-    <h1>List of properties</h1>
-    <table class="table caption-top">
-      <thead>
-        <tr>
-          <th scope="col" class="headTab">Image URL</th>
-          <th scope="col" class="headTab">Title</th>
-          <th scope="col" class="headTab">Size of Property</th>
-          <th scope="col" class="headTab">Location</th>
-          <th scope="col" class="headTab">Type of Property</th>
-          <th scope="col" class="headTab">Edit/Delete</th>
-          <!-- <th scope="col" class="headTab">ID</th> -->
-        </tr>
-      </thead>
-      <tbody id="listings"></tbody>
-    </table>
     <button
+    id="addbtn"
       type="button"
-      class="btn btn-primary"
+      class="btn btn-outline-dark"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
-      ADD Property
+      Create a listing
     </button>
-    <!-- Modal Add Property-->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Fill in details</h5>
+            <h5 class="modal-title" id="exampleModalLabel">
+              Please provide details of the property
+            </h5>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
             ></button>
           </div>
           <div class="modal-body">
-            <form onsubmit="event.preventDefault();">
-              <input
-                type="text"
-                name="addTodo"
-                id="image"
-                placeholder="Add image URL "
-              />
-              <input
-                type="text"
-                name="addTodo"
-                id="title"
-                placeholder="Add Property name"
-                required
-              />
-              <input
-                type="text"
-                name="addTodo"
-                id="type"
-                placeholder="Add Property type "
-                required
-              />
-              <input
-                type="text"
-                name="addTodo"
-                id="carhead"
-                placeholder="Add Property location "
-                required
-              />
-              <input
-                type="text"
-                name="addTodo"
-                id="bot_head"
-                placeholder="Add Property size in Sq M "
-                required
-              />
-              <button type="submit" id="addNewItem" class="btn btn-primary">
-                ADD
-              </button>
+            <form onsubmit="event.preventDefault(); addListing()">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Title"
+                  placeholder="Name of property"
+                />
+                <label for="Title">Property Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Location">
+                  <option selected>Select the location</option>
+                  <option value="Cape Town">Cape Town</option>
+                  <option value="Atlantic Seaboard">
+                    Atlantic Seaboard
+                  </option>
+                  <option value="Northen Suburbs">Northen Suburbs</option>
+                  <option value="Southern Suburbs">Southern Suburbs</option>
+                </select>
+                <label for="Location">Location</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Image"
+                  placeholder="Image of property"
+                />
+                <label for="Image">Property Image</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Type">
+                  <option selected>Select the type of property</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="Family Home">Family Home</option>
+                  <option value="Studio">Studio</option>
+                </select>
+                <label for="ype">Type Of property</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Bedrooms">
+                  <option selected>Select the number of bedrooms</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label for="Bedrooms">Number of Bedrooms</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Bathrooms">
+                  <option selected>Select the number of bathrooms</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label for="Bathrooms">Number of bathrooms</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Garage">
+                  <option selected>Select the number of garages</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <label for="Garage">Number of Garages</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Size"
+                  placeholder="Size"
+                />
+                <label for="Size">Size</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="Price"
+                  placeholder="Price"
+                />
+                <label for="Price">Price</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select class="form-select" id="Status">
+                  <option selected>Select the listing</option>
+                  <option value="Rent">For Rent</option>
+                  <option value="Sale">For Sale</option>
+                </select>
+                <label for="Status">Listing Status</label>
+              </div>
+              <button type="submit" class="submit btn btn-dark">ADD</button>
             </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal edit Property -->
-    <a href="./index.html">HOME PAGE</a>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="admin.js"></script>
-  </body>
+  </div>
+  <div id="form1">
+    <form>
+        <div class="filters">
+          <label for="exampleInputEmail1" class="form-label">Type</label>
+          <div>
+              <select name="budgets" id="comboA" onchange="typeHouse()" placeholder="Max Price">
+                  
+                  <option value="All">Looking for..</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="House">Family House</option>
+                  <option value="Studio">Studio</option>
+                 
+                </select>
+         
+      </div>
+      </div>
+      <div class="filters">
+          <label for="exampleInputEmail1" class="form-label">City</label>
+          <div>
+              <select name="budgets" id="comboB" onchange="addressHouse()" placeholder="Max Price">
+                  
+                  <option value="All">All Cities</option>
+                  <option value="Chicago">Chicago</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="Miami">Miami</option>
+                  <option value="New York">New York</option>
+                </select>
+         
+      </div>
+  </div>
+      
+  <div class="filters">
+          <label for="exampleInputEmail1" class="form-label">Bedrooms</label>
+          <div>
+              <select name="budgets" id="comboC" onchange="bedroomsHouse()" placeholder="Max Price">
+                  
+                  <option value="All">Bedrooms</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+         
+      </div>
+  </div>
+     
+  <div class="filters">
+          <label for="budgets" class="form-label">Price</label>
+          <div>
+              <select name="budgets" id="comboD" onchange="priceHouse()" placeholder="Max Price">
+                  
+                  <option value="All">Max Price</option>
+                  <option value="All">Any</option>
+                  <option value="4500">$3000-$5000</option>
+                  <option value="6000">$5000-$8000</option>
+                  <option value="10000">$8000+</option>
+                </select>
+         
+      </div>
+  </div>
+   </form>
+  </div>
+    <div id="displayListings">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Title</th>
+              <th scope="col">Location</th>
+              <th scope="col">Image</th>
+              <th scope="col">Type</th>
+              <th scope="col">Bedrooms</th>
+              <th scope="col">Bathrooms</th>
+              <th scope="col">Garage</th>
+              <th scope="col">Size</th>
+              <th scope="col">Price</th>x
+            </tr>
+          </thead>
+          <tbody id="propertylist">
+          </tbody>
+        </table>
+      </div>
+
+      <a href="index.html" ><button id="adminbtn">Home</button></a>
+      <script src="admin.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
 </html>
